@@ -1,7 +1,5 @@
-package com.pm.datajpamapping.entity;
+package com.pm.datajpa.entity;
 
-import com.pm.datajpamapping.entity.Appointment;
-import com.pm.datajpamapping.entity.Insurance;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

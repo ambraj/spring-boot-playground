@@ -1,6 +1,5 @@
-package com.pm.datajpamapping.entity;
+package com.pm.datajpa.entity;
 
-import com.pm.datajpamapping.entity.Doctor;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,7 +16,7 @@ import java.util.Set;
 @Setter
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class Department {
+public class Doctor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,13 +24,14 @@ public class Department {
 
     private String name;
 
+    private String specialty;
+
     @CreationTimestamp
-    private LocalDateTime createdAt;
+    private LocalDate createdAt;
 
-    @OneToOne
-    private Doctor headDoctor;
+    @OneToMany(mappedBy = "doctor")
+    private Set<Appointment> appointments = new HashSet<>();
 
-    @ManyToMany
-    private Set<Doctor> doctors = new HashSet<>();
-
+    @ManyToMany(mappedBy = "doctors")
+    private Set<Department> departments = new HashSet<>();
 }

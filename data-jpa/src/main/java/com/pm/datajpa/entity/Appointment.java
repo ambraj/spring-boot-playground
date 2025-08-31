@@ -1,4 +1,4 @@
-package com.pm.datajpamapping.entity;
+package com.pm.datajpa.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
