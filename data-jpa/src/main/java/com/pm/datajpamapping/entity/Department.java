@@ -1,5 +1,6 @@
 package com.pm.datajpamapping.entity;
 
+import com.pm.datajpamapping.entity.Doctor;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,7 +1,12 @@
 package com.pm.datajpamapping.entity;
 
+import com.pm.datajpamapping.entity.Appointment;
+import com.pm.datajpamapping.entity.Insurance;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
